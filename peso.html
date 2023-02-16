@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu peso en diferentes planetas</title>
+</head>
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en Marte o en Júpiter</p>
+    
+    <script>
+        let peso = parseFloat(prompt("Indica tu peso en la tierra"));
+        let gravedadMarte=3.72;
+        let gravedadJupiter=24.79;
+        let planeta
+        let pesoFinal
+        let planetaUsuario = parseInt(prompt("En qué planeta quieres saber tu peso?\nEscribe 1 para Marte\nEscribe 2 para Júpiter"))
+        if (planetaUsuario==1) {
+            planeta= "Marte"
+            pesoFinal=peso*gravedadMarte/9.8
+        } else if(planetaUsuario==2){
+            planeta="Júpiter"
+            pesoFinal=peso*gravedadJupiter/9.8
+        } else{
+            alert("Número no válido")
+            planeta="un planeta distante"
+            pesoFinal=100000
+        }   
+        pesoFinal=parseInt(pesoFinal)
+        document.write("Tu peso en "+planeta+" es de <strong>"+pesoFinal+" kilos</strong>.")
+    </script>
+</body>
+</html>
